@@ -23,7 +23,10 @@ kubectl apply -f https://github.com/nginxinc/nginx-gateway-fabric/releases/lates
 echo "[6/6] local-path-provisioner"
 kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/local-path-storage.yaml
 
-echo "✅ Platform install applied. Wait for pods to become Ready:"
+echo
+echo "✅ Platform install applied."
+echo "Check readiness:"
 echo "  kubectl get pods -n ingress-nginx"
 echo "  kubectl get pods -n cert-manager"
+echo "  kubectl get gatewayclass"
 echo "  kubectl top nodes"
