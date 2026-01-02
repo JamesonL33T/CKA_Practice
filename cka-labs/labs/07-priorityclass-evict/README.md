@@ -1,0 +1,11 @@
+Scenario #7
+Create a new PriorityClass named high-priority for user workloads with a value that is one less than the highest existing user-defined priority class value.
+Patch the existing Deployment busybox-logger running in the priority namespace to use the high-priority priority class.
+Ensure that the busybox-logger Deployment rolls out successfully with the new priority class set.
+It is expected that Pods from other Deployments running in the priority namespace are evicted.
+Do not modify other Deployments running in the priority namespace.
+
+
+Goal: Create PriorityClass high-priority and patch busybox-logger (namespace priority) to use it.
+kubectl apply -f cka-labs/labs/07-priorityclass-evict/setup.yaml
+bash cka-labs/labs/07-priorityclass-evict/verify.sh
