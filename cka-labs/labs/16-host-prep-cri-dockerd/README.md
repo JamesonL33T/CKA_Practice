@@ -8,6 +8,13 @@ Note:
 The provided package is a Debian .deb.
 If running on a non-Debian OS (e.g. RHEL), install cri-dockerd using the appropriate native package format while achieving the same outcome.
 
+For RHEL:
+# Download RPM
+curl -LO https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.9/cri-dockerd-0.3.9-3.el9.x86_64.rpm
+
+# Install
+sudo dnf install -y cri-dockerd-0.3.9-3.el9.x86_64.rpm
+
 Debian packages are installed using dpkg
 Enable and start the cri-docker service
 
