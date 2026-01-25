@@ -4,8 +4,13 @@ Task:
 Complete these tasks to prepare the system for Kubernetes:
 Set up cri-dockerd:
 Install the Debian package ~/cri-dockerd_0.3.9.3-0.ubuntu-jammy_amd64.db
+Note:
+The provided package is a Debian .deb.
+If running on a non-Debian OS (e.g. RHEL), install cri-dockerd using the appropriate native package format while achieving the same outcome.
+
 Debian packages are installed using dpkg
 Enable and start the cri-docker service
+
 Configure these system parameters:
 Set net.ipv6.conf.all.forwarding to 1
 Set net.ipv4.ip_forward to 1
